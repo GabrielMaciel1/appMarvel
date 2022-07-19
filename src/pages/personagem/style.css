@@ -1,0 +1,55 @@
+.container-personagem {
+  flex-direction: row;
+  display: flex;
+  margin: auto;
+  padding: 80px 40px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-personagem .image {
+  display: flex;
+  height: 300px;
+  width: auto;
+}
+
+.container-personagem .details {
+  flex-direction: column;
+  margin: 20px;
+  height: 480px;
+  width: 100%;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.container-personagem .name {
+  font-size: 35px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container-personagem .description {
+  font-size: 20px;
+  text-align: center;
+}
+
+.comics-table {
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 5px;
+}
+
+.events-table {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .container-personagem {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container-personagem .image {
+    align-items: center;
+    margin-left: 120px;
+  }
+}
