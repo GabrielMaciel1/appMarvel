@@ -95,10 +95,6 @@ input[type="text"] {
   transform-style: preserve-3d;
 }
 
-.content:hover .content-inner {
-  transform: rotateY(180deg);
-}
-
 .content-front,
 .content-back {
   position: absolute;
@@ -109,14 +105,12 @@ input[type="text"] {
   overflow: hidden;
 }
 
-.content-back {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  transform: rotateY(180deg);
-  overflow-y: auto;
+.favorite {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
 }
-
 .content li {
   list-style: none;
   padding-bottom: 10px;

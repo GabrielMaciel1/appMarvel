@@ -3,7 +3,7 @@ import CharacterItem from "./CharacterItem";
 
 const CharacterTable = ({ items, isLoading }) => {
   return isLoading ? (
-    <h1>Loading</h1>
+    <h1>Carregando...</h1>
   ) : (
     <section className="contents">
       {items.map((item) => (

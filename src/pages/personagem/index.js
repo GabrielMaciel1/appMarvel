@@ -4,9 +4,18 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 function Personagem() {
   const { state } = useLocation();
+  const navigate = useNavigate();
   console.log("propriedades", state);
   return (
     <div class="container-personagem">
+      <div>
+        <header>
+          <button class="btn" onClick={() => navigate(-1)}>
+            Retornar
+          </button>
+        </header>
+      </div>
+
       <img
         class="image"
         src={state.thumbnail.path + "/portrait_xlarge.jpg"}

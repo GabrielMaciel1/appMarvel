@@ -41,39 +41,28 @@ const CharacterItem = ({ item }) => {
           <div className="content-front">
             <img src={item.thumbnail.path + "/portrait_xlarge.jpg"} alt="" />
           </div>
-          <div className="content-back">
-            <h1>{item.name}</h1>
-            <ul>
-              <li>
-                <strong>Name:</strong> {item.name}
-              </li>
-              <li>
-                <strong>Description:</strong> {item.description}
-              </li>
 
-              <li style={{ textAlign: "center" }}>
-                {localStorage
-                  .getItem("favorites")
-                  .includes(JSON.stringify(item)) ? (
-                  <button
-                    style={{ width: "15%" }}
-                    type="button"
-                    onClick={() => unsetFavorite(item)}
-                  >
-                    <FaHeart style={{ color: "red" }}></FaHeart>
-                  </button>
-                ) : (
-                  <button
-                    style={{ widows: "15%" }}
-                    type="button"
-                    onClick={() => setFavorite(item)}
-                  >
-                    <FaRegHeart></FaRegHeart>
-                  </button>
-                )}
-              </li>
-            </ul>
-          </div>
+          <li className="favorite" style={{ textAlign: "center" }}>
+            {localStorage
+              .getItem("favorites")
+              .includes(JSON.stringify(item)) ? (
+              <button
+                style={{ width: "100%" }}
+                type="button"
+                onClick={() => unsetFavorite(item)}
+              >
+                <FaHeart style={{ color: "red" }}></FaHeart>
+              </button>
+            ) : (
+              <button
+                style={{ widows: "100%" }}
+                type="button"
+                onClick={() => setFavorite(item)}
+              >
+                <FaRegHeart></FaRegHeart>
+              </button>
+            )}
+          </li>
         </div>
       </div>
     </Link>
